@@ -79,7 +79,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 685px;
+    height: 732px;
+    width: 100%;
     text-align: center;
 }
 .hero-content {
@@ -88,6 +89,18 @@
     align-items: center;
     justify-content: center;
     font-family: inter;
+}
+.name{
+    font-size: 40px;
+    font-weight: 500;
+}
+.hero-text{
+    padding-top: 10px;
+    font-size: 20px;
+}
+.arrow-link{
+    display:flex;
+    padding-top:20px;
 }
 
 /*About Section*/
@@ -229,6 +242,15 @@
 
 /* Media Queries */
 @media(max-width : 768px){
+    .hero{
+        height: 754px;
+        padding:0 26px 0 26px;
+    }
+    .hero-content{
+        width:auto;
+        align-items:center;
+        justify-content: space-between;
+    }
     .about{
         height:auto;
         padding: 60px 26px 80px 26px;
