@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
 }
+
+/*Header*/
 .header {
     display: flex;
     align-items: center;
@@ -71,6 +73,7 @@
     border:none;
 }
 
+/*Hero section*/
 .hero {
     display: flex;
     flex-direction: column;
@@ -86,95 +89,251 @@
     justify-content: center;
     font-family: inter;
 }
-.about {
+
+/*About Section*/
+.about{
+    height: 732px;
+    width:100%;
     align-items: center;
     justify-content: center;
-    height: 600px;
-    text-align: center;
-    background-color: lightgray;
-    padding: 10px 10px; 
+    display:flex;
+    flex-direction: column;
+    background-color: lightgrey;
+}
+.about-container{
+    width: 100%;
+    max-width: 930px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.about-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
 }
 .heading{
+    font-size: 24px;
+    font-weight: 500;
+}
+.about-divider{
+    flex:1;
+    height:1px;
+    background-color: black;
+}
+.about-content{
     display: flex;
+    margin-top: 22px;
     align-items: center;
-    text-align: center;
-    margin:20px 0;
-    font-family: inter;
-    width:100%;
+    justify-content: space-between;
+    padding-top:20px;
 }
-.heading::before,
-.heading::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid black;
+.about-text{
+    flex: 1; 
+    font-size:15px;
 }
-.heading h2 {
-    padding: 20px 15px;
-}
-
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    align-items: center;
-    font-family: inter;
-    gap: 20px;
-}
-.about-text {
-    flex: 1;
-    line-height: 1.5;
-    font-size: 15px;
-}
-.about-text p{
-    margin-bottom: 20px;
-    text-align: left;
-}
-.about-image {
-    width: 250px;
-    height: 200px;
+.about-image{
+    height:250px;
+    width:250px;
     border-radius: 10px;
     overflow: hidden;
     padding: 10px 10px;
 }
 .about-image img{
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
+/*Experience section*/
+.experience{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 732px;
+}
+.container{
+    width: 100%;
+    max-width: 930px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.divider{
+    flex:1;
+    height:1px;
+    background-color: black;
+}
+.title-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+.title-wrapper h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+.experience-items{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+    gap: 26px;
+}
+.vertical-line{
+   width: 1px; 
+   align-self: stretch; 
+   background-color: black; 
+   flex-shrink: 0; 
+}
+.job-info{
+    text-align:right; 
+}
+.job-info hr{
+    border: none;
+    border-top: 1px solid black;
+    margin-bottom: 8px;
+    margin-top:8px;
+    font-family: inter;
+}
+.job-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.job-info .company {
+    font-size: 16px;
+}
+.job-info .date {
+    font-size: 14px;
+}
+.job-details{
+    padding-left:20px;
+}
+.job-desc{
+    list-style-position: outside;
+    padding-left: 20px;
+}
+.job-desc li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.experience-items.reverse .job-info {
+    text-align: left;
+}
+
+
+
+
 /* Media Queries */
-@media(max-width : 480px){
-    .header{
-        padding: 25px 10px;
+@media(max-width : 768px){
+    .about{
+        height:auto;
+        padding: 60px 26px 80px 26px;
+    }
+    .about-heading{
+        width:auto;
+        height:36px;
+        align-items:center;
+        justify-content: center;
+    }
+    .heading{
+       align-items:center;
+       justify-content:center;
+    }
+    .about-content{
+        gap:30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-text{
+        text-align:left;
+    }
+    .experience {
+        height: auto;
+        padding: 60px 0;
+    }
+    .experience-item,
+    .experience-item.reverse {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .vertical-line {
+        display: none;
+    }
+    .job-info,
+    .experience-item.reverse .job-info {
+        text-align: left;
+    }
+    .job-desc,
+    .experience-item.reverse .job-desc {
+        padding: 0 0 0 20px;
+    }
+    .experience-items{
+        gap:10px;
+    }
+    .job-info hr{
+        display: none;
+    }
+    .vertical-line{
+        display: none;
+    }
+    .experience-items{
+        display: flex;
+        flex-direction: column;
+    }
+    .job-info{
+       text-align:left;
+    }
+    .job-info .company, 
+    .job-info .date{
+        display : inline;
+        font-size: 13px;
+        margin: 0;
+    }
+    .job-info .company::after{
+        content:" / ";
+    }
+    .experience-item,
+    .experience-item.reverse {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .job-info,
+    .experience-item.reverse .job-info {
+      order: 1;
+      text-align: left;
+    }
+    .job-desc{
+        order: 2;
+    }
+}
+@media (min-width: 769px) and (max-width:1023px)  {
+    .header {
+        padding: 25px 30px;
+    }
+    .hero {
+        height: 500px;
     }
     .about {
-        padding: 40px 15px;
-    }
-
-    .heading h2 {
-        font-size: 22px;
+        padding: 60px 60px;
     }
 
     .about-container {
+        gap: 40px;
+        display:flex;
         flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-    
-    .about{
-        height: auto;
-    }
-    .about-text {
-        font-size: 14px;
     }
 
     .about-image {
-        width: 100%;
-        max-width: 260px;
-        height: 180px;
-    }
+        width: 280px;
+        height: 200px;
+    } 
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media(max-width: 1024px){
     .header {
         width: auto;
         height: 90px;
@@ -202,26 +361,7 @@
         width: 280px;
         height: 200px;
     }
-}
-@media (min-width: 769px) and (max-width: 1023px) {
-    .header {
-        padding: 25px 30px;
-    }
-    .hero {
-        height: 500px;
-    }
-    .about {
-        padding: 60px 60px;
-    }
-
-    .about-container {
-        gap: 40px;
-    }
-
-    .about-image {
-        width: 280px;
-        height: 200px;
-    }
+    
 }
 @media (min-width: 2560px) {
     .nav a {
@@ -235,7 +375,7 @@
         padding: 80px 200px;
     }
 
-    .heading h2 {
+    .heading{
         font-size: 36px;
     }
 
