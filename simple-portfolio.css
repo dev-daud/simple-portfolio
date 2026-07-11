@@ -79,20 +79,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 732px;
+    height: 934px;
     width: 100%;
     text-align: center;
+    gap:100px;
 }
-.hero-content {
+.hero-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: inter;
 }
-.name{
-    font-size: 40px;
-    font-weight: 500;
+.hero-content h1{
+    font-family: inter;
+    font-size: 72px;
+    font-weight: regular;
+}
+.hero-content p{
+    font-family: inter;
+    font-size: 24px;
+    font-weight: lighter;
 }
 .hero-text{
     padding-top: 10px;
@@ -126,8 +132,9 @@
     gap: 22px;
 }
 .heading{
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight: regular;
+    font-family: inter;
 }
 .about-divider{
     flex:1;
@@ -136,21 +143,21 @@
 }
 .about-content{
     display: flex;
-    margin-top: 22px;
     align-items: center;
     justify-content: space-between;
-    padding-top:20px;
+    gap:79px;
+    margin-top:50px;
 }
 .about-text{
     flex: 1; 
-    font-size:15px;
+    font-size:16px;
+    font-weight: regular;
 }
 .about-image{
-    height:250px;
-    width:250px;
+    height:300px;
+    width:300px;
     border-radius: 10px;
     overflow: hidden;
-    padding: 10px 10px;
 }
 .about-image img{
     height: 100%;
@@ -242,18 +249,32 @@
 
 /* Media Queries */
 @media(max-width : 768px){
+    .nav,.btn-wrapper{
+       display : none;
+    }
+    .menu-btn{
+        display: block;
+    }
     .hero{
         height: 754px;
         padding:0 26px 0 26px;
+        gap:50px;
     }
     .hero-content{
         width:auto;
         align-items:center;
         justify-content: space-between;
     }
+    .hero-content h1{
+        font-size:  36px;
+    }
+    .hero-content p{
+        font-size: 20px;
+    }
     .about{
         height:auto;
         padding: 60px 26px 80px 26px;
+        gap:40px;
     }
     .about-heading{
         width:auto;
@@ -266,12 +287,19 @@
        justify-content:center;
     }
     .about-content{
-        gap:30px;
+        gap: 30px;
         display: flex;
         flex-direction: column;
+
     }
     .about-text{
         text-align:left;
+        font-size:14px;
+        font-weight: regular;
+    }
+    .about-image{
+        height: 150px;
+        width:150px;
     }
     .experience {
         height: auto;
@@ -337,9 +365,6 @@
     .header {
         padding: 25px 30px;
     }
-    .hero {
-        height: 500px;
-    }
     .about {
         padding: 60px 60px;
     }
@@ -360,15 +385,6 @@
         width: auto;
         height: 90px;
         padding: 0 30px;
-    }
-    .menu-btn {
-        display: flex;
-    }
-    .btn-wrapper, .nav {
-        display: none;
-    }
-    .hero {
-        height: 400px;
     }
      .about {
         padding: 50px 30px;
@@ -399,15 +415,6 @@
 
     .heading{
         font-size: 36px;
-    }
-
-    .about-text {
-        font-size: 18px;
-    }
-
-    .about-image {
-        width: 400px;
-        height: 260px;
     }
 }
 
