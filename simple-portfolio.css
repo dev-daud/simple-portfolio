@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +8,7 @@
 }
 
 /* Shared */
-.container {
+ .container {
     width: 100%;
     max-width: 930px;
     padding: 0 20px;
@@ -62,6 +65,13 @@
 
 /* Header */
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+}
+.header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,6 +129,7 @@
     font-family: inter;
     color: black;
     background-color: transparent;
+    text-decoration:none;
 }
 .btn-wrapper a:hover {
     border: 1px solid black;
@@ -524,6 +535,9 @@
     .header {
         padding: 25px 30px;
     }
+    .header-inner{
+        padding: 25px 30px;
+    }
     .hero {
         height: 754px;
     }
@@ -537,6 +551,10 @@
 @media (max-width: 1024px) {
     .header {
         width: auto;
+        height: 90px;
+        padding: 0 30px;
+    }
+    .header-inner {
         height: 90px;
         padding: 0 30px;
     }
