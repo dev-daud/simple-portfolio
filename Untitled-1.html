@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Portfolio</title>
+    <style>
+        .drawer{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        width: 100%;
+        background-color: #fff;
+        }
+       .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 90px;
+        padding: 0 30px;
+        background-color: #fff;
+        flex-shrink: 0;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+    .logo-text {
+        transform: translate(-10px, -5px);
+        color: black;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: inter;
+    }
+    .menu-btn {
+        display: display;
+        width: 36px;
+        height: 24px;
+        background-color: transparent;
+        border: none;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        height:450px;
+        width:306px;
+        gap: 50px;
+        margin-top:200px;
+        background-color: lightgray;
+    }
+    .nav{
+        text-decoration:none;
+        display:flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .btn-wrapper{
+        display:flex;
+        flex-direction:column;
+        gap: 20px;
+    }
+    </style>
+</head>
+<body>
+   <div class="drawer">
+        <header class="header">
+            <a href="#" class="logo">
+                <span class="logo-text">A</span>
+            </a>
+            <button class="menu-btn" type="button" aria-label="Close menu">&times;</button>
+        </header>
+        <div class="wrapper">
+            <nav class="nav">
+                <a href="#about">about</a>
+                <a href="#experience">experience</a>
+                <a href="#project">project</a>
+                <a href="#contact">contact</a>
+            </nav>
+            <div class="btn-wrapper">
+                <a target="_blank" href="assets/Resume.pdf">Resume</a>
+                <a href="#contact">Hire me</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
