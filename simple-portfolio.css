@@ -412,6 +412,10 @@ html {
     min-height: 100vh;
     width: 100%;
     background-color:gainsboro;
+    transform: translateX(100%);
+    position:fixed;
+    inset:0;
+    z-index:200;
 }
 .header-drawer {
     display: flex;
@@ -492,10 +496,18 @@ html {
     padding:8px 10px;
 }
 
+/*JS*/
+body.drawer-open .drawer{
+    transform: translateX(0); 
+}
+body.drawer-open{
+    overflow:hidden;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .nav,
-    .btn-wrapper {
+    .btn-wrapper{
         display: none;
     }
     .menu-btn {
