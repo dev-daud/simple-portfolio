@@ -7,6 +7,10 @@ html {
     padding: 0;
 }
 
+body {
+    font-family: Inter, sans-serif;
+}
+
 /* Shared */
  .container {
     width: 100%;
@@ -45,7 +49,6 @@ html {
     z-index: 1;
     font-size: 36px;
     font-weight: 500;
-    font-family: inter;
     padding: 0 22px;
     background-color: #fff;
     white-space: nowrap;
@@ -60,7 +63,6 @@ html {
 .job-desc {
     font-size: 16px;
     font-weight: 400;
-    font-family: inter;
 }
 
 /* Header */
@@ -96,7 +98,6 @@ html {
     color: black;
     font-size: 16px;
     font-weight: 500;
-    font-family: inter;
 }
 .nav {
     display: flex;
@@ -108,7 +109,6 @@ html {
     padding: 10px 10px;
     font-size: 16px;
     font-weight: 500;
-    font-family: inter;
     color: black;
 }
 .nav a:hover {
@@ -126,7 +126,6 @@ html {
     border-radius: 5px;
     font-size: 16px;
     font-weight: 500;
-    font-family: inter;
     color: black;
     background-color: transparent;
     text-decoration:none;
@@ -160,12 +159,10 @@ html {
     justify-content: center;
 }
 .hero-content h1 {
-    font-family: inter;
     font-size: 72px;
     font-weight: regular;
 }
 .hero-content p {
-    font-family: inter;
     font-size: 24px;
     font-weight: lighter;
 }
@@ -236,7 +233,6 @@ html {
     border-top: 1px solid black;
     margin-bottom: 8px;
     margin-top: 8px;
-    font-family: inter;
 }
 .job-info h3 {
     font-size: 16px;
@@ -291,12 +287,10 @@ html {
 .lang {
     font-size: 14px;
     font-weight: 400;
-    font-family: inter;
 }
 .project-name {
     font-size: 30px;
     font-weight: 400;
-    font-family: inter;
     margin-bottom: 12px;
 }
 .desktop-text {
@@ -307,7 +301,6 @@ html {
 }
 .description {
     font-size: 16px;
-    font-family: inter;
     font-weight: 400;
     line-height: 1.5;
 }
@@ -350,7 +343,6 @@ html {
     max-width: 520px;
     font-size: 16px;
     font-weight: 400;
-    font-family: inter;
     line-height: 1.6;
     color: black;
 }
@@ -369,11 +361,10 @@ html {
     border-radius: 5px;
     font-size: 16px;
     font-weight: 500;
-    font-family: inter;
     color: black;
     background-color: transparent;
 }
-.message :hover {
+.message:hover {
     border: 1px solid black;
 }
 .social-links{
@@ -402,10 +393,18 @@ html {
     justify-content:center;
     font-size:14px;
     font-weight:regular;
-    font-family:inter;
 }
 
 /*Drawer style*/
+.drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 199;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
 .drawer{
     display: flex;
     flex-direction: column;
@@ -416,13 +415,14 @@ html {
     position:fixed;
     inset:0;
     z-index:200;
+    transition: transform 0.2s ease;
 }
 .header-drawer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 90px;
-    padding: 0 30px;
+    padding: 0 26px;
     background-color: #fff;
     flex-shrink: 0;
     margin: 22px 20px 0;
@@ -441,7 +441,6 @@ html {
     color: black;
     font-size: 16px;
     font-weight: 500;
-    font-family: inter;
 }
 .close-btn {
     display: display;
@@ -473,7 +472,6 @@ html {
     color:black;
     font-size: 16px;
     font-weight:regular;
-    font-family: inter;
     justify-content:center;
     text-align:center;
     padding:10px;
@@ -489,7 +487,6 @@ html {
     border-radius: 5px;
     font-size: 16px;
     font-weight: regular;
-    font-family: inter;
     color: black;
     background-color: transparent;
     text-decoration:none;
@@ -497,6 +494,10 @@ html {
 }
 
 /*JS*/
+body.drawer-open .drawer-overlay {
+    opacity: 1;
+    visibility: visible;
+}
 body.drawer-open .drawer{
     transform: translateX(0); 
 }
@@ -507,7 +508,7 @@ body.drawer-open{
 /* Media Queries */
 @media (max-width: 768px) {
     .nav,
-    .btn-wrapper{
+    .header .btn-wrapper {
         display: none;
     }
     .menu-btn {
@@ -610,7 +611,6 @@ body.drawer-open{
     .contact-text{
         font-size: 14px;
         font-weight: regular;
-        font-family:inter;
     }
 
     .desktop-text{
@@ -631,11 +631,8 @@ body.drawer-open{
     }
 }
 @media (min-width: 769px) and (max-width: 1023px) {
-    .header {
-        padding: 25px 30px;
-    }
-    .header-inner{
-        padding: 25px 30px;
+    .header-inner {
+        padding: 0 26px;
     }
     .hero {
         height: 754px;
@@ -651,11 +648,10 @@ body.drawer-open{
     .header {
         width: auto;
         height: 90px;
-        padding: 0 30px;
     }
     .header-inner {
         height: 90px;
-        padding: 0 30px;
+        padding: 0 26px;
     }
     .hero {
         height: 754px;
@@ -687,7 +683,7 @@ body.drawer-open{
     .project-image {
         width: 100%;
         height: auto;
-    }    
+    }
 }
 @media (min-width: 2560px) {
     .nav a {

@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="simple-portfolio.css">
 </head>
 <body>
 
     <header class="header">
       <div class="header-inner">
-        <a href="#" class="logo">
+        <a href="#hero" class="logo">
             <span class="logo-text">A</span>
         </a>
-        <aside class="nav">
+        <nav class="nav">
             <a href="#about">about</a>
             <a href="#experience">experience</a>
             <a href="#project">project</a>
             <a href="#contact">contact</a>
-        </aside>
+        </nav>
         <div class="btn-wrapper">
             <a target="_blank" href="assets/Resume.pdf">Resume</a>
             <a href="#contact">Hire me</a>
@@ -29,10 +32,10 @@
       </div>
     </header>
 
-
+    <div class="drawer-overlay"></div>
     <div class="drawer">
         <div class="header-drawer">
-            <a href="#" class="tag">
+            <a href="#hero" class="tag">
                 <span class="tag-text">A</span>
             </a>
             <button class="close-btn" type="button" aria-label="Close menu">
@@ -53,7 +56,7 @@
         </div>
     </div>
     
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-content">
             <h1>Hi, I'm Areeba</h1>
             <p>I design and build things</p>
@@ -169,14 +172,14 @@
         <div class="contact-content">
             <p class="contact-text">I am currently seeking employment, and I would appreciate it if you could contact me with any available job opportunities.</p>
             <div class="btn-wrapper">
-                <a href="mailto:areeba.dev08@gmail.com?subject=Hello&body=I want to contact you" target="_blank" class="message desktop-text">Write Message</a>
-                <a href="mailto:areeba.dev08@gmail.com?subject=Hello&body=I want to contact you" target="_blank" class="message mobile-text">Say Hello</a>
+                <a href="mailto:areeba.dev08@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you" target="_blank" class="message desktop-text">Write Message</a>
+                <a href="mailto:areeba.dev08@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you" target="_blank" class="message mobile-text">Say Hello</a>
             </div>
            <div class="social-links">
                 <a target="_blank"  href="https://github.com/AdaBugHunter" rel="noopener noreferrer">
                     <img src="assets/git-icon.svg" alt="Git">
                 </a>
-                <a  target="_blank"   href="https://www.linkedin.com/in/areeba-ali-91654122a/" rel="noopener noreferrer">
+                <a  target="_blank" href="https://www.linkedin.com/in/areeba-ali-91654122a/" rel="noopener noreferrer">
                     <img src="assets/linkedIn-icon.svg" alt="Linkedin">
                 </a>
             </div>
@@ -188,9 +191,6 @@
         <p class="footer-content">Areeba - 2026</p>
     </footer>
 
-    <script src="simple-portfolio.js">
-      
-      
-    </script>
+    <script src="simple-portfolio.js"></script>
 </body>
 </html>
