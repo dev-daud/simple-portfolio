@@ -322,7 +322,7 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit:  contain;
 }
 .Project-Link{
     height:16px;
@@ -506,21 +506,12 @@ body.drawer-open{
 }
 .active {
   color:black;
-  border-bottom: 2px solid black;
 }
 .nav a.active {
     background-color: lightgray;
     border-radius: 5px;
 }
-.nav a.active::after {
-content: "";
-position: absolute;
-left: 0;
-bottom: -5px;
-width: 100%;
-height: 2px;
-background: black;
-}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
