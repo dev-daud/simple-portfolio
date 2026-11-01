@@ -45,7 +45,7 @@ document.addEventListener("keydown", (event) => {
 
 // Activate nav link based on current section
 function activeLinkOnScroll() {
-  const scrollPosition = ;
+  const scrollPosition = window.scrollY + 100;
   let currentSection = "";
 
   sections.forEach((section) => {
