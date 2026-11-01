@@ -1,0 +1,22 @@
+name: JavaScript syntax check
+on:
+  push:
+    branches: [main, test/analyzer-cross-repo]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  syntax:
+    name: Check portfolio JavaScript
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Validate script syntax
+        run: node --check script.js
